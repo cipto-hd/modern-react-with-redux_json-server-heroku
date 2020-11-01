@@ -37,9 +37,9 @@ const router = jsonServer.router(db()); */
 2 . Or if we want to generate dynamically the data, we can customize `db.js`
 and make sure the code lines with `db.js` and its db function call line are uncommented
 ```javascript
-const router = jsonServer.router('db.json'); 
-/* const db = require("./db");
-const router = jsonServer.router(db()); */
+// const router = jsonServer.router('db.json'); 
+const db = require("./db");
+const router = jsonServer.router(db()); 
 ```
 
 ## Deploy to **Heroku**
