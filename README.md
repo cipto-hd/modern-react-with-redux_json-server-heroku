@@ -6,17 +6,16 @@
 * [Deploy to **Heroku**](#deploy-to-heroku)
 * [Deploy to **Azure**](#deploy-to-azure)
 
-
-## Create your database
-
+## Just wanna to try how to deploy json-server
 1 . Clone this repo to anywhere on your computer.
 
 ```bash
-git clone https://github.com/jesperorb/json-server-heroku.git
+git clone https://github.com/cipto-hd/modern-react-with-redux_json-server-heroku
 ```
+2. Jump to Deploy to Heroku section
 
-2 . Change `db.json` to **your own content** according to the [`json-server example`](https://github.com/typicode/json-server#example) and then `commit` your changes to git. 
-
+## Customize the data
+1 . Change `db.json` to **your own content** according to the [`json-server example`](https://github.com/typicode/json-server#example) and then `commit` your changes to git. 
 _this example will create `/posts` route , each resource will have `id`, `title` and `content`. `id` will auto increment!_
 ```json
 {
@@ -29,8 +28,19 @@ _this example will create `/posts` route , each resource will have `id`, `title`
   ]
 }
 ```
-
----
+and make sure the code line with `db.json` is uncommented
+```javascript
+const router = jsonServer.router('db.json'); 
+/* const db = require("./db");
+const router = jsonServer.router(db()); */
+```
+2. Or if we want to generate dynamically the data, we can customize `db.js`
+and make sure the code lines with `db.js` and its db function call line are uncommented
+```javascript
+const router = jsonServer.router('db.json'); 
+/* const db = require("./db");
+const router = jsonServer.router(db()); */
+```
 
 ## Deploy to **Heroku**
 
