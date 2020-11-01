@@ -12,7 +12,7 @@
 ```bash
 git clone https://github.com/cipto-hd/modern-react-with-redux_json-server-heroku
 ```
-2. Jump to Deploy to Heroku section
+2 . Jump to Deploy to Heroku section
 
 ## Customize the data
 1 . Change `db.json` to **your own content** according to the [`json-server example`](https://github.com/typicode/json-server#example) and then `commit` your changes to git. 
@@ -34,7 +34,7 @@ const router = jsonServer.router('db.json');
 /* const db = require("./db");
 const router = jsonServer.router(db()); */
 ```
-2. Or if we want to generate dynamically the data, we can customize `db.js`
+2 . Or if we want to generate dynamically the data, we can customize `db.js`
 and make sure the code lines with `db.js` and its db function call line are uncommented
 ```javascript
 const router = jsonServer.router('db.json'); 
